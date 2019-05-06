@@ -33,6 +33,7 @@ RUN sudo su - -c "R -e \"install.packages('Rmisc', repos='http://cran.r-project.
 RUN sudo su - -c "R -e \"install.packages('signal', repos='http://cran.r-project.org')\""
 RUN sudo su - -c "R -e \"install.packages('foreach', repos='http://cran.r-project.org')\""
 RUN sudo su - -c "R -e \"install.packages('doParallel', repos='http://cran.r-project.org')\""
+RUN sudo su - -c "R -e \"install.packages('PMCMR', repos='http://cran.r-project.org')\""
 
 # adding start R script
 ADD start.R start.R
