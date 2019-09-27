@@ -14,6 +14,7 @@ Rserve Imagate to execute R-Scripts over http. In my case i use Node.js and the 
 - signal
 - foreach
 - doParallel
+- spaMM
 
 ### access
 

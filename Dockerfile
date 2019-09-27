@@ -8,7 +8,7 @@ RUN gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
 RUN gpg -a --export E084DAB9 | sudo apt-key add -
   
 # Update and install
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --force-yes \
   r-base \
   r-recommended \
   r-base-dev \
@@ -34,6 +34,7 @@ RUN sudo su - -c "R -e \"install.packages('signal', repos='http://cran.r-project
 RUN sudo su - -c "R -e \"install.packages('foreach', repos='http://cran.r-project.org')\""
 RUN sudo su - -c "R -e \"install.packages('doParallel', repos='http://cran.r-project.org')\""
 RUN sudo su - -c "R -e \"install.packages('PMCMR', repos='http://cran.r-project.org')\""
+RUN sudo su - -c "R -e \"install.packages('spaMM', repos='http://cran.r-project.org')\""
 
 # adding start R script
 ADD start.R start.R
